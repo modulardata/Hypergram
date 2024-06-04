@@ -6,6 +6,41 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!--main screen-->
+    <main>
+    <canvas class="canvas" id="canvas"></canvas>
+        <!-- control panel section -->
+        <div class="control-panel">
 
+            <!--upload img file to out app-->
+            <input type="file" id="file-input" class="file-input"/>
+            <label for="file-input">UPLOAD FILE</label>
+            <!--   close upload img file section  -->
+
+            <!--adjust brightness -->
+            <label for="brightness">Brightness</label>
+            <input type="range" id="brightness" />
+            <!--close brightness section-->
+
+            <!--adjust contrast-->
+            <label for="contrast">Contrast</label>
+            <input type="range" id="contrast" />
+            <!--close contrast section-->
+
+            <!--adjust transparent-->
+            <label for="transparent">Transparent</label>
+            <input type="range" id="transparent" />
+            <!--close transparent section-->
+
+            <button id="save-button" class="save-img">SAVE IMAGE</button>
+        </div>
+        <!--close control panel section-->
+    </main>
+    <!--Close main screen section-->
+    <script>
+        document.getElementById('save-button').addEventListener('click', () => {
+            alert('You save successfully')
+        })
+    </script>
 </body>
 </html>
