@@ -1,0 +1,37 @@
+type: edu
+files:
+  - name: src/index.html
+    visible: true
+    learner_created: false
+  - name: src/style.css
+    visible: true
+    learner_created: false
+  - name: src/script.js
+    visible: true
+    learner_created: false
+  - name: test/images/testBrightness.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/images/testContrast.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/images/testImage.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/images/testMultipleFilters.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/images/testTransparent.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/test.js
+    visible: false
+    learner_created: false
+feedback_link: https://hyperskill.org/projects/199/stages/991/implement#comment
+status: Solved
+record: 2

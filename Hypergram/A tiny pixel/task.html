@@ -1,0 +1,28 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>It's time to add the actual editing to the app. Begin with adding event handlers to the sliders so that you can work with image pixels and know when their values are changed.</p>
+<h5 id="objectives">Objectives</h5>
+<p>Add the following attributes to the sliders:</p>
+<ul>
+<li>The brightness slider should have the <code class="java">min="-255" max="255" step="1"</code> attributes.</li>
+<li>The contrast slider should have the <code class="java">min="-128" max="128" step="1"</code> attributes.</li>
+<li>A transparent slider should have <code class="java">min="0" max="1" value="1" step="0.1"</code> attributes.</li>
+</ul>
+<p>Once users upload an image and save the image's initial pixel values, the pixels will change each time users move a slider. Add the event handlers to these sliders.</p>
+<p>If users change the brightness value, use the following formula to change the initial pixel values:</p>
+<pre><code class="language-no-highlight">RED = Truncate(RED + Brightness)
+GREEN = Truncate(GREEN + Brightness)
+BLUE = Truncate(BLUE + Brightness)</code></pre>
+<p>If users change the contrast value, use the following formulas to change the pixel values:</p>
+<pre><code class="language-no-highlight">Factor = 259*(255+Contrast)/(255*(259-Contrast))
+RED= Truncate(Factor * (RED - 128) + 128)
+GREEN = Truncate(Factor * (GREEN - 128) + 128)
+BLUE = Truncate(Factor * (BLUE - 128) + 128)</code></pre>
+<p><code class="java">Truncate</code> keeps the values in the valid range, from 0 to +255. If a value goes below 0, it will be truncated to zero; if a value goes beyond 255, it will be truncated to 255.</p>
+<p>If users change contrast and brightness together, change the contrast first, and then change the brightness of the resulting pixels.</p>
+<p>If users change the transparency of the image, use the following formula to change the initial pixel values:</p>
+<pre><code class="language-no-highlight">ALPHA = ALPHA * Transparent</code></pre>
+<h5 id="example">Example</h5>
+<p><em>An example of your app</em></p>
+<p><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="Change the transparency, contrast and brightness of an image using Hypergram" height="828" src="https://ucarecdn.com/c1a0070e-6047-4e50-9349-5a8abdf3bb9f/" width="1380"/></picture></p>
+</div>
