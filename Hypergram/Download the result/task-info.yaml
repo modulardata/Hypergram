@@ -33,5 +33,11 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://hyperskill.org/learn/step/14425#comment
-status: Solved
+status: Failed
+feedback:
+  message: |-
+    Error: Wrong answer in test #7
+
+    Looks like you didn't download a PNG file named 'testMultipleFilters.png', after clicking on 'Save Image' button
+  time: "Thu, 06 Jun 2024 10:52:22 UTC"
 record: 3

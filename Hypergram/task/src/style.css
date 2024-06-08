@@ -1,14 +1,16 @@
 body {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     margin: 1vh;
 }
 
-.main-container {
+.wrapper {
     height: 98vh;
     display: flex;
+    justify-content: space-between;
+    gap: 2em;
 }
 
-.image-panel {
+.canvas-panel {
     flex-basis: 80%;
     display: flex;
     align-items: center;
@@ -23,17 +25,14 @@ body {
     background-color: skyblue;
 }
 
-.right-panel-content {
+#form {
     display: flex;
     flex-flow: column;
     flex-basis: 100%;
+    margin: 15px 30px;
+    gap: .7rem;
 }
 
-.right-panel-item {
-    display: flex;
-    flex-flow: column;
-    margin: 15px 30px;
-}
 
 #file-input {
     display: none;
@@ -43,7 +42,7 @@ label {
     text-align: center;
 }
 
-.button {
+.upload-button {
     line-height: 30px;
     height: 30px;
     background-color: pink;
@@ -51,10 +50,42 @@ label {
     border-radius: 0.25em;
     font-family: arial, sans-serif;
     font-size: 0.9em;
+    padding: 7px;
+}
+
+.upload-button:hover {
+    background-color: lightpink;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    font-size: 0.9em;
+}
+
+.reset-button {
+    display:none;
+}
+
+button {
+    background-color: #666a86;
+    border: none;
+    border-radius: 0.25em;
+    font-family: arial, sans-serif;
+    font-size: 0.9em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 1rem;
 }
 
 .button:hover {
     background-color: lightpink;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    font-size: 0.9em;
 }
 
 .button:active {
